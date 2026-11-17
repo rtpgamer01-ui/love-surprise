@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#fbe5e4"><meta name="description" content="A little museum made with love.">
+  <title>A Little Museum of Us ♥</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Quicksand:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="ambient" aria-hidden="true"><span></span><span></span><span></span><span></span><span></span></div>
+  <main id="app">
+    <section class="screen intro-screen active" id="intro" aria-label="Welcome">
+      <div class="intro-copy"><p class="eyebrow">made for you, by hand</p><h1>I love you</h1><p class="subline">and every ordinary day with you</p></div>
+      <div class="love-tree" aria-hidden="true"><div class="trunk"></div><div class="branches"></div><div class="tree-hearts" id="treeHearts"></div></div>
+      <button class="text-link intro-next" data-go="roses">A little something for you <span>→</span></button>
+    </section>
+
+    <section class="screen rose-screen" id="roses" aria-label="A shower of roses"><div class="rose-rain" id="roseRain"></div><p class="eyebrow">A LITTLE SOMETHING, JUST BECAUSE</p><h1>For every reason<br><em>and no reason at all.</em></h1><button class="text-link" data-go="dedication">Continue <span>→</span></button></section>
+    <section class="screen dedication-screen" id="dedication" aria-label="From me to you"><p class="eyebrow">A COLLECTION OF LITTLE FOREVERS</p><h1>From me <em>to you.</em></h1><p>Made with all the love I have.</p><button class="text-link" data-go="preview">There's something waiting <span>→</span></button></section>
+    <section class="screen preview-screen" id="preview" aria-label="A preview of the museum"><div class="preview-collage" id="previewCollage"></div><h2>See what I built <em>for you.</em></h2><p>Tap anywhere to go in.</p><button class="primary-btn" data-go="door">Enter our little museum ♥</button></section>
+
+    <section class="screen door-screen" id="door" aria-label="The museum door">
+      <div class="door-intro"><span class="pill">♥ Someone wanted you to know</span><p class="eyebrow">CLOSED TO EVERYONE. EXCEPT YOU.</p><h1><span data-her>My love</span>, I built you a <em>museum.</em></h1><p>Knock three times. That's the rule.</p></div>
+      <div class="door-scene"><button class="museum-door" id="museumDoor" aria-label="Knock on the museum door"><span class="door-sign">A PRIVATE<br>COLLECTION</span><span class="door-knocker"></span><span class="door-handle"></span></button><div class="door-glow"><strong>Come in, <span data-her>my love</span>.</strong><small>Five little rooms, and every one is about you.</small></div></div>
+      <p class="knock-hint" id="knockHint">Tap the door three times · 0 / 3</p>
+    </section>
+
+    <section class="screen gallery-screen" id="gallery" aria-label="Room 1, the gallery">
+      <div class="room-heading"><p class="eyebrow">ROOM 1 · THE GALLERY</p><h2>Our <em>photos</em></h2><p>Each one is covered. Rub your finger across to see it.</p></div>
+      <div class="exhibit-wrap"><button class="round-arrow" id="photoPrev" aria-label="Previous photo">←</button><article class="exhibit-card"><div class="photo-frame" id="revealPhoto"><img id="galleryImage" src="assets/photos/photo-1.jpg" alt="A favourite memory together"><button class="photo-cover" id="photoCover" aria-label="Reveal photograph"><span>rub to reveal</span><i>♥</i></button></div><div class="plaque"><strong id="photoCaption">A little moment, forever</strong><small id="photoSub">EXHIBIT 1 · FROM OUR COLLECTION</small></div></article><button class="round-arrow" id="photoNext" aria-label="Next photo">→</button></div>
+      <div class="gallery-count"><span id="galleryCount">1 / 8</span></div><div class="gallery-dots" id="galleryDots"></div>
+      <button class="primary-btn" data-go="puzzle">Keep walking <span>→</span></button>
+    </section>
+
+    <section class="screen puzzle-screen" id="puzzle" aria-label="Room 2, the restoration desk">
+      <div class="room-heading"><p class="eyebrow">ROOM 2 · THE RESTORATION DESK</p><h2>This photo <em>fell apart.</em></h2><p>Nine pieces. Tap two to swap them, or drag one where you want it.</p></div>
+      <div class="puzzle-shell"><div class="puzzle-grid" id="puzzleGrid" aria-label="Nine-piece photo puzzle"></div><div class="puzzle-stats"><span>Moves <b id="moveCount">0</b></span><span>◷ <b id="timer">00:00</b></span><button id="peekBtn" class="soft-btn">◉ Hold to peek</button></div><div class="puzzle-message" id="puzzleMessage">Put the pieces back together ♥</div></div>
+      <div class="puzzle-controls"><button class="soft-btn" id="shufflePuzzle">↻ Shuffle again</button><button class="primary-btn" data-go="letter">Keep walking →</button></div>
+    </section>
+
+    <section class="screen letter-screen" id="letter" aria-label="Room 3, a letter for you">
+      <div class="room-heading"><p class="eyebrow">ROOM 4 · THE LETTER</p><h2>From me <em>to you.</em></h2><p>Some things deserve to be read slowly.</p></div>
+      <button class="envelope" id="envelope" aria-label="Open the letter"><span class="envelope-flap"></span><span class="envelope-paper"><b>♥</b><small>A letter, just for you</small></span><span class="envelope-seal">♥</span></button>
+      <p class="envelope-hint" id="envelopeHint">Tap the seal to open your letter</p>
+      <article class="letter-paper" id="letterPaper" aria-hidden="true">
+        <p class="letter-kicker">MY DEAREST <span data-her>LOVE</span>,</p>
+        <div class="editable-letter" id="letterText">Thank you for being patient with me, making me laugh, listening to my endless talks, and loving me even on the days I'm difficult.<br><br>No matter how busy life gets, I hope you always remember one thing... you'll always be my favourite person. ♡<br><br>I love you more than words can ever explain. ♥</div>
+        <p class="signature">— <span data-my>Your person</span></p>
+        <div class="voice-note"><div><p class="eyebrow">A LITTLE SOMETHING MORE</p><strong>Hear my voice</strong><small>I'll say it, not just write it.</small></div><label class="upload-btn" for="voiceUpload">＋ Add voice note</label><input id="voiceUpload" type="file" accept="audio/*" hidden><audio id="voicePlayer" controls hidden></audio><p class="audio-status" id="audioStatus">Add an audio recording to make this moment yours.</p></div>
+      </article>
+      <button class="primary-btn letter-next" id="letterNext" data-go="promises">Keep walking →</button>
+    </section>
+
+    <section class="screen promises-screen" id="promises" aria-label="Room 5, the promises">
+      <div class="confetti" aria-hidden="true" id="confetti"></div><div class="room-heading"><p class="eyebrow">ROOM 5 · THE PROMISES</p><h2>Tick the ones you'll <em>hold on to.</em></h2></div>
+      <article class="promise-card"><div class="promise-top"><span>♥</span><small>BETWEEN <b data-my>ME</b> AND <b data-her>YOU</b></small></div><h3>Our Promises</h3><div class="promise-list" id="promiseList"><label><input type="checkbox" checked><span>1. Never go to bed angry.</span></label><label><input type="checkbox" checked><span>2. Say the little things out loud.</span></label><label><input type="checkbox" checked><span>3. Always choose the honest conversation.</span></label><label><input type="checkbox" checked><span>4. Choose you again, every ordinary morning.</span></label><label><input type="checkbox" checked><span>5. Pick you first. Every time.</span></label></div><div class="sealed-stamp" id="sealedStamp">SEALED<br><small>WITH LOVE</small></div></article>
+      <button class="primary-btn seal-btn" id="sealBtn">Seal it ♥</button><p class="sealed-note" id="sealedNote">A promise is a little thing we keep choosing.</p>
+      <button class="restart-link" id="restart">↶ Walk through our little museum again</button>
+    </section>
+
+    <nav class="progress" id="progress" aria-label="Museum rooms"><div class="progress-dots"><span class="done"></span><span></span><span></span><span></span><span></span></div><small>Made with ♥ · <b>Our little museum</b> · <button id="howBtn">How it works</button></small></nav>
+  </main>
+  <div class="toast" id="toast" role="status"></div>
+  <dialog id="howDialog"><button class="dialog-close" id="closeHow" aria-label="Close">×</button><p class="eyebrow">A NOTE FOR YOU</p><h3>How to explore</h3><p>Knock on the door, uncover the photographs, restore the little puzzle, open your letter and seal your promises. Every room is made to be explored at your own pace.</p></dialog>
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,6 @@
+Add your own photographs to this folder and name them exactly:
+photo-1.jpg, photo-2.jpg, photo-3.jpg, photo-4.jpg,
+photo-5.jpg, photo-6.jpg, photo-7.jpg, photo-8.jpg
+
+Use photo-1.jpg for the 3x3 restoration puzzle too. JPG or PNG is recommended.
+The project includes a gentle placeholder image if photo-1.jpg is missing.

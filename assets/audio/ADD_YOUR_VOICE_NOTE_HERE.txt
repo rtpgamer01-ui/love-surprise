@@ -1,0 +1,1 @@
+Optional: keep your original voice recording here for your own reference. To add it to the website, open the letter screen and use the 'Add voice note' button. The selected audio is played locally in the browser and is not uploaded.
